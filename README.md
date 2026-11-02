@@ -1,20 +1,39 @@
-# thinkpad like grub theme
-Here is a theme to match thinkpad original colors. Only black, white and the iconic thinkpad red.
+# ThinkPad-like GRUB theme
 
-## instalation
-To use this theme i recommend installing the *GRUB Customizer* app, a visual GRUB theme customizer.
+A clean GRUB theme inspired by the classic ThinkPad palette: black, white, and the iconic red accent.
 
-Simply clone the repository in a folder of your preference. Then in *Grub Customizer* select the "Appearance settings" tab and in there click on the "+" to add the folder *theme.tar.gz* of the cloned repository.
+> Designed for Full HD (1920x1080) displays.
 
-You also can reference it in the ```/etc/default/grub``` on the line ```GRUB_THEME="/boot/grub/themes/thinkpad3/theme.txt"``` whiteout installing any third-party program either using the compressed folder.
+## Preview
 
-### about theme size
-How i made this for my T480 1920x1080 screen *this theme is exclusively for FullHD screens*.
+This theme is a modified version of [AlexanderKh's Lenovo ThinkPad EFI GRUB theme](https://github.com/AlexanderKh/lenovo-thinkpad-efi-grub-theme), recolored to match a darker ThinkPad aesthetic.
 
-* 1.5x is for average 1100 lines screen (Full HD)
+## Installation
 
+### GRUB Customizer
 
-## credits and notes
-This is a modified theme from [AlexanderKh Repo](https://github.com/AlexanderKh/lenovo-thinkpad-efi-grub-theme). If your looking for a preview of this theme you can take a look of him preview and imagine the background in the black color of your thinkpad, text in white and progress bar/select box in the red of the lenovo boot img.
+1. Clone this repository.
+2. Open **GRUB Customizer**.
+3. Go to **Appearance settings**.
+4. Use the **+** button to import `theme.tar.gz`.
+5. Save the configuration and reboot to verify the result.
 
-Have fun and thank you *AlexanderKh* for this incredible theme!
+### Manual setup
+
+Copy the `theme` directory to your GRUB themes folder and point `GRUB_THEME` to its `theme.txt`:
+
+```ini
+GRUB_THEME="/boot/grub/themes/thinkpadlike/theme.txt"
+```
+
+Then regenerate your GRUB configuration using the command appropriate for your distribution.
+
+> GRUB configuration is system-critical. Keep a recovery option available and verify the destination path before applying changes.
+
+## Display support
+
+The assets are optimized for a 1920x1080 screen. Other resolutions may require adjustments to fonts, spacing, or background assets.
+
+## Credits
+
+Based on the original work by [AlexanderKh](https://github.com/AlexanderKh/lenovo-thinkpad-efi-grub-theme). Thank you for making the source theme available.
